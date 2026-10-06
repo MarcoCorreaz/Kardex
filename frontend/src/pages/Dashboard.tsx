@@ -86,7 +86,7 @@ export function Dashboard() {
                   <Tooltip 
                     cursor={{fill: 'hsl(var(--muted))'}}
                     contentStyle={{ backgroundColor: 'hsl(var(--card))', borderRadius: '8px', border: '1px solid hsl(var(--border))' }}
-                    formatter={(value: number) => formatterBRL.format(value)}
+                    formatter={(value: any) => formatterBRL.format(Number(value))}
                   />
                   <Bar dataKey="faturamento" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
                 </BarChart>

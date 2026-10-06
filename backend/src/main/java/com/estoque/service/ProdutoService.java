@@ -57,7 +57,7 @@ public class ProdutoService {
 		if (request.quantidadeInicial() != null && request.quantidadeInicial() > 0) {
 			BigDecimal custo = request.custoInicial() != null ? request.custoInicial() : BigDecimal.ZERO;
 			estoqueService.registrarEntrada(
-				new MovimentacaoEntradaRequest(salvo.getId(), request.quantidadeInicial(), custo, "Estoque Inicial")
+				salvo.getId(), request.quantidadeInicial(), custo, "Estoque Inicial"
 			);
 			saldoFinal = request.quantidadeInicial();
 		}
